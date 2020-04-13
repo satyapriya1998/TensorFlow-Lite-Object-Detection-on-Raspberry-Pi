@@ -154,6 +154,6 @@ source tflite1-env/bin/activate
 Then, try re-running the script as described in [Step 5](https://github.com/satyapriya1998/TensorFlow-Lite-Object-Detection-on-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md#step-5-run-the-tensorflow-lite-model).
 
 ### 3. THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE
-This error can occur when you run the `bash get_pi_requirements.sh` command in Step 1c. It occurs because the package data got corrupted while downloading. You can resolve the error by re-running the `bash get_pi_requirements.sh` command a few more times until it successfully completes without reporting that error.
+This error can occur when you run the `bash get_pi_requirements.sh` command in Step 3. It occurs because the package data got corrupted while downloading. You can resolve the error by re-running the `bash get_pi_requirements.sh` command a few more times until it successfully completes without reporting that error.
 
 *Note: the URLs provided in these commands may change as newer versions of tflite_runtime are released. Check the [TFLite Python Quickstart page](https://www.tensorflow.org/lite/guide/python) for download URLs to the latest version of tflite_runtime.*
