@@ -9,7 +9,7 @@ This guide provides step-by-step instructions for how to set up TensorFlow Lite 
 
 TensorFlow Lite (TFLite) models run much faster than regular TensorFlow models on the Raspberry Pi. 
 
-## How to Set Up and Run TensorFlow Lite Object Detection Models on the Raspberry Pi
+## How to Set Up and Run TensorFlow Lite Object Detection Models on Raspberry Pi
 
 Setting up TensorFlow Lite on the Raspberry Pi is much easier than regular TensorFlow! These are the steps needed to set up TensorFlow Lite:
 
@@ -50,7 +50,7 @@ cd tflite1
 
 We'll work in this /home/pi/tflite1 directory for the rest of the guide. Next up is to create a virtual environment called "tflite1-env".
 
-I'm using a virtual environment for this guide because it prevents any conflicts between versions of package libraries that may already be installed on your Pi. Keeping it installed in its own environment allows us to avoid this problem. For example, if you've already installed TensorFlow v1.8 on the Pi using my [other guide](https://www.youtube.com/watch?v=npZ-8Nj1YwY), you can leave that installation as-is without having to worry about overriding it.
+I'm using a virtual environment for this guide because it prevents any conflicts between versions of package libraries that may already be installed on your Pi. Keeping it installed in its own environment allows us to avoid this problem. For example, if you've already installed TensorFlow v1.8 on the Pi, you can leave that installation as-is without having to worry about overriding it.
 
 Install virtualenv by issuing:
 
@@ -151,7 +151,7 @@ cd tflite1
 source tflite1-env/bin/activate
 ```
 
-Then, try re-running the script as described in [Step 1e](https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md#step-1e-run-the-tensorflow-lite-model).
+Then, try re-running the script as described in [Step 1e](https://github.com/satyapriya1998/TensorFlow-Lite-Object-Detection-on-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md#step-1e-run-the-tensorflow-lite-model).
 
 ### 3. THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE
 This error can occur when you run the `bash get_pi_requirements.sh` command in Step 1c. It occurs because the package data got corrupted while downloading. You can resolve the error by re-running the `bash get_pi_requirements.sh` command a few more times until it successfully completes without reporting that error.
