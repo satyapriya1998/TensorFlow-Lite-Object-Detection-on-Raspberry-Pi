@@ -13,13 +13,13 @@ TensorFlow Lite (TFLite) models run much faster than regular TensorFlow models o
 
 Setting up TensorFlow Lite on the Raspberry Pi is much easier than regular TensorFlow! These are the steps needed to set up TensorFlow Lite:
 
-- 1a. Update the Raspberry Pi
-- 1b. Download this repository and create virtual environment
-- 1c. Install TensorFlow and OpenCV
-- 1d. Set up TensorFlow Lite detection model
-- 1e. Run TensorFlow Lite model!
+- 1. Update the Raspberry Pi
+- 2. Download this repository and create virtual environment
+- 3. Install TensorFlow and OpenCV
+- 4. Set up TensorFlow Lite detection model
+- 5. Run TensorFlow Lite model!
 
-### Step 1a. Update the Raspberry Pi
+### Step 1. Update the Raspberry Pi
 First, the Raspberry Pi needs to be fully updated. Open a terminal and issue:
 ```
 sudo apt-get update
@@ -33,7 +33,7 @@ While we're at it, let's make sure the camera interface is enabled in the Raspbe
   <img src="/doc/camera_enabled.png">
 </p>
 
-### Step 1b. Download this repository and create virtual environment
+### Step 2. Download this repository and create virtual environment
 
 Next, clone this GitHub repository by issuing the following command. The repository contains the scripts we'll use to run TensorFlow Lite, as well as a shell script that will make installing everything easier. Issue:
 
@@ -80,7 +80,7 @@ At this point, here's what your tflite1 directory should look like if you issue 
 
 If your directory looks good, it's time to move on to Step 1c!
 
-### Step 1c. Install TensorFlow Lite dependencies and OpenCV
+### Step 3. Install TensorFlow Lite dependencies and OpenCV
 Next, we'll install TensorFlow, OpenCV, and all the dependencies needed for both packages. OpenCV is not needed to run TensorFlow Lite, but the object detection scripts in this repository use it to grab images and draw detection results on them.
 
 To make things easier, I wrote a shell script that will automatically download and install all the packages and dependencies. Run it by issuing:
@@ -97,7 +97,7 @@ This downloads about 400MB worth of installation files, so it will take a while.
 
 That was easy! On to the next step.
 
-### Step 1d. Set up TensorFlow Lite detection model
+### Step 4. Set up TensorFlow Lite detection model
 Next, we'll set up the detection model that will be used with TensorFlow Lite. This guide shows how to either download a sample TFLite model provided by Google.
 
 A detection model has two files associated with it: a detect.tflite file (which is the model itself) and a labelmap.txt file (which provides a labelmap for the model). My preferred way to organize the model files is to create a folder (such as "BirdSquirrelRaccoon_TFLite_model") and keep both the detect.tflite and labelmap.txt in that folder. This is also how Google's downloadable sample TFLite model is organized.
@@ -119,7 +119,7 @@ unzip coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip -d Sample_TFLite_model
 
 Okay, the sample model is all ready to go! 
 
-### Step 1e. Run the TensorFlow Lite model!
+### Step 5. Run the TensorFlow Lite model!
 It's time to see the TFLite object detection model in action! First, free up memory and processing power by closing any applications you aren't using. Also, make sure you have your webcam or Picamera plugged in.
 
 Run the real-time webcam detection script by issuing the following command from inside the /home/pi/tflite1 directory. (Before running the command, make sure the tflite1-env environment is active by checking that (tflite1-env) appears in front of the command prompt.) **The TFLite_detection_webcam.py script will work with either a Picamera or a USB webcam.**
@@ -151,7 +151,7 @@ cd tflite1
 source tflite1-env/bin/activate
 ```
 
-Then, try re-running the script as described in [Step 1e](https://github.com/satyapriya1998/TensorFlow-Lite-Object-Detection-on-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md#step-1e-run-the-tensorflow-lite-model).
+Then, try re-running the script as described in [Step 5](https://github.com/satyapriya1998/TensorFlow-Lite-Object-Detection-on-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md#step-5-run-the-tensorflow-lite-model).
 
 ### 3. THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE
 This error can occur when you run the `bash get_pi_requirements.sh` command in Step 1c. It occurs because the package data got corrupted while downloading. You can resolve the error by re-running the `bash get_pi_requirements.sh` command a few more times until it successfully completes without reporting that error.
