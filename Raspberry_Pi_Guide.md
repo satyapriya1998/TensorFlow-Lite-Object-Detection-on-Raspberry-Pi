@@ -44,7 +44,7 @@ git clone https://github.com/satyapriya1998/TensorFlow-Lite-Object-Detection-on-
 This downloads everything into a folder called TensorFlow-Lite-Object-Detection-on-Raspberry-Pi. That's a little long to work with, so rename the folder to "tflite1" and then cd into it:
 
 ```
-mv TensorFlow-Lite-Object-Detection-on-Raspberry-Pi tflite1
+mv TensorFlow-Lite-Object-Detection-on-Raspberry-Pi/ tflite1
 cd tflite1
 ```
 
