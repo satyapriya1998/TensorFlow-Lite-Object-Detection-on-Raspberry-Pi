@@ -7,19 +7,8 @@
 ## Introduction
 This guide provides step-by-step instructions for how to set up TensorFlow Lite on the Raspberry Pi and use it to run object detection models. It also shows how to set up the Coral USB Accelerator on the Pi and run Edge TPU detection models. It works for the Raspberry Pi 3 and Raspberry Pi 4 running either Rasbpian Buster or Rasbpian Stretch.
 
-This guide is the second part of my larger TensorFlow Lite tutorial series:
-
-1. [How to Train, Convert, and Run Custom TensorFlow Lite Object Detection Models on Windows 10](https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi#part-1---how-to-train-convert-and-run-custom-tensorflow-lite-object-detection-models-on-windows-10)
-2. How to Run TensorFlow Lite Object Detection Models on the Raspberry Pi (with Optional Coral USB Accelerator) *<--- You are here!*
-3. How to Run TensorFlow Lite Object Detection Models on Android Devices
-
-TensorFlow Lite (TFLite) models run much faster than regular TensorFlow models on the Raspberry Pi. You can see a comparison of framerates obtained using regular TensorFlow, TensorFlow Lite, and Coral USB Accelerator models in my [TensorFlow Lite Performance Comparison YouTube video](https://www.youtube.com/watch?v=TiOKvOrYNII).
-
+TensorFlow Lite (TFLite) models run much faster than regular TensorFlow models on the Raspberry Pi. 
 This portion of the guide is split in to three sections:
-
-* [Section 1. Run TensorFlow Lite Object Detection Models on the Raspberry Pi](https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md#part-1---how-to-set-up-and-run-tensorflow-lite-object-detection-models-on-the-raspberry-pi)
-* Section 2. Run Edge TPU Object Detection Models on the Raspberry Pi Using the Coral USB Accelerator
-* Section 3. Compile Custom Edge TPU Object Detection Models
 
 This repository also includes scripts for running the TFLite and Edge TPU models on images, videos, or webcam/Picamera feeds.
 
@@ -33,7 +22,7 @@ Setting up TensorFlow Lite on the Raspberry Pi is much easier than regular Tenso
 - 1d. Set up TensorFlow Lite detection model
 - 1e. Run TensorFlow Lite model!
 
-I also made a YouTube video that walks through this guide:
+I have also mentioned a YouTube video that walks through this guide:
 
 [![Link to my YouTube video!](https://raw.githubusercontent.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/master/doc/YouTube_video1.JPG)](https://www.youtube.com/watch?v=aimSGOAUI8Y)
 
@@ -41,7 +30,7 @@ I also made a YouTube video that walks through this guide:
 First, the Raspberry Pi needs to be fully updated. Open a terminal and issue:
 ```
 sudo apt-get update
-sudo apt-get dist-upgrade
+sudo apt-get upgrade
 ```
 Depending on how long it’s been since you’ve updated your Pi, the update could take anywhere between a minute and an hour. 
 
