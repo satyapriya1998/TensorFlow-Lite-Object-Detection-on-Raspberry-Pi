@@ -1,7 +1,7 @@
 # How to Run TensorFlow Lite Object Detection Models on the Raspberry Pi
 
 <p align="center">
-   <img src="doc/TFLite-vs-EdgeTPU.gif">
+   <img src="doc/BSR_demo.gif">
 </p>
 
 ## Introduction
