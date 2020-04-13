@@ -75,7 +75,7 @@ source tflite1-env/bin/activate
 At this point, here's what your tflite1 directory should look like if you issue `ls` command.
 
 <p align="center">
-  <img src="/doc/tflite1_folder.png">
+  <img src="/doc/tflite1_ss.png">
 </p>
 
 If your directory looks good, it's time to move on to Step 1c!
