@@ -1,15 +1,13 @@
-# How to Run TensorFlow Lite Object Detection Models on the Raspberry Pi (with Optional Coral USB Accelerator)
+# How to Run TensorFlow Lite Object Detection Models on the Raspberry Pi
 
 <p align="center">
    <img src="doc/TFLite-vs-EdgeTPU.gif">
 </p>
 
 ## Introduction
-This guide provides step-by-step instructions for how to set up TensorFlow Lite on the Raspberry Pi and use it to run object detection models. It also shows how to set up the Coral USB Accelerator on the Pi and run Edge TPU detection models. It works for the Raspberry Pi 3 and Raspberry Pi 4 running either Rasbpian Buster or Rasbpian Stretch.
+This guide provides step-by-step instructions for how to set up TensorFlow Lite on the Raspberry Pi and use it to run object detection models. It works for the Raspberry Pi 3 and Raspberry Pi 4 running either Rasbpian Buster or Rasbpian Stretch.
 
 TensorFlow Lite (TFLite) models run much faster than regular TensorFlow models on the Raspberry Pi. 
-
-This repository also includes scripts for running the TFLite and Edge TPU models on images, videos, or webcam/Picamera feeds.
 
 ## How to Set Up and Run TensorFlow Lite Object Detection Models on the Raspberry Pi
 
@@ -20,10 +18,6 @@ Setting up TensorFlow Lite on the Raspberry Pi is much easier than regular Tenso
 - 1c. Install TensorFlow and OpenCV
 - 1d. Set up TensorFlow Lite detection model
 - 1e. Run TensorFlow Lite model!
-
-I have also mentioned a YouTube video that walks through this guide:
-
-[![Link to my YouTube video!](https://raw.githubusercontent.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/master/doc/YouTube_video1.JPG)](https://www.youtube.com/watch?v=aimSGOAUI8Y)
 
 ### Step 1a. Update the Raspberry Pi
 First, the Raspberry Pi needs to be fully updated. Open a terminal and issue:
@@ -161,17 +155,5 @@ Then, try re-running the script as described in [Step 1e](https://github.com/Edj
 
 ### 3. THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE
 This error can occur when you run the `bash get_pi_requirements.sh` command in Step 1c. It occurs because the package data got corrupted while downloading. You can resolve the error by re-running the `bash get_pi_requirements.sh` command a few more times until it successfully completes without reporting that error.
-
-### 4. Unsupported data type in custom op handler: 6488064Node number 2 (EdgeTpuDelegateForCustomOp) failed to prepare.
-This error occurs when trying to use a newer version of the libedgetpu library (v13.0 or greater) with an older version of TensorFlow (v2.0 or older). It can be resolved by uninstalling your current version of TensorFlow and installing the latest version of the tflite_runtime package. Issue these commands (make sure you are inside the tflite1-env virtual environment):
-
-```
-pip3 uninstall tensorflow
-pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
-```
-
-(Or, if you're using Python 3.5, use `pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp35-cp35m-linux_armv7l.whl` instead.)
-
-Then, re-run the TFLite detection script. It should work now!
 
 *Note: the URLs provided in these commands may change as newer versions of tflite_runtime are released. Check the [TFLite Python Quickstart page](https://www.tensorflow.org/lite/guide/python) for download URLs to the latest version of tflite_runtime.*
