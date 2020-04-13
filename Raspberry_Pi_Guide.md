@@ -78,7 +78,7 @@ At this point, here's what your tflite1 directory should look like if you issue 
   <img src="/doc/tflite1_ss.png">
 </p>
 
-If your directory looks good, it's time to move on to Step 1c!
+If your directory looks good, it's time to move on to Step 3!
 
 ### Step 3. Install TensorFlow Lite dependencies and OpenCV
 Next, we'll install TensorFlow, OpenCV, and all the dependencies needed for both packages. OpenCV is not needed to run TensorFlow Lite, but the object detection scripts in this repository use it to grab images and draw detection results on them.
